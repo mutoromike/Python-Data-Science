@@ -51,3 +51,20 @@ axes2.set_xlabel('X_label_axes2')
 axes2.set_ylabel('Y_label_axes2')
 axes2.set_title('Axes 2 Title')
 # plt.show()
+
+"""
+Using subplots is more efficient compared
+to using plt.figure()
+"""
+fig, axes = plt.subplots(nrows=1, ncols=2)
+for ax in axes:
+    ax.plot(x, y, 'g')
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.set_title('title')
+
+# fig    
+# plt.tight_layout()
+
+"""Figure size and DPI"""
+fig, axes = plt.subplots(figsize=(12,3))
